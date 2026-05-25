@@ -31,7 +31,7 @@ Kafka Topic (orders_topic)
       ↓
 Streaming Consumer
       ↓
-SQLite Analytics Database
+ Analytics Database
       ↓
 Streamlit Dashboard
 ```
@@ -66,7 +66,7 @@ Streamlit Dashboard
                            │
                            ▼
                 ┌─────────────────────┐
-                │ SQLite Database     │
+                │  Database           │
                 │ Analytics Storage   │
                 └──────────┬──────────┘
                            │
@@ -89,7 +89,7 @@ Streamlit Dashboard
 | Data Processing | Python Consumers |
 | Database | SQLite |
 | Dashboard | Streamlit |
-| Fake Data Generation | Faker |
+| Synthetic Data Simulation | Data |
 | Version Control | Git & GitHub |
 
 ---
@@ -397,26 +397,17 @@ Container orchestration for scalable deployment.
 
 ---
 
-# Screenshots
+## Dashboard Preview
 
-## Dashboard Overview
+![Dashboard](screenshots/dashboard.png)
 
-(Add screenshot here)
+![Orders By Warehouse](screenshots/ordersbywarehouse.png)
 
----
+![Recent Orders](screenshots/Recentorders.png)
 
-## Warehouse Analytics
+![Shipment Status](screenshots/shipmentstatus.png)
 
-(Add screenshot here)
-
----
-
-## Recent Orders Table
-
-(Add screenshot here)
-
----
-
+![Top Orders](screenshots/toporders.png)
 # Learning Outcomes
 
 This project demonstrates practical understanding of:
@@ -430,12 +421,20 @@ This project demonstrates practical understanding of:
 - Data engineering workflows
 
 ---
+## Challenges Faced
 
-# Resume Description
+- Configuring Kafka and Docker networking on Windows
+- Handling PostgreSQL authentication issues
+- Managing real-time streaming consumers
+- Ensuring continuous dashboard updates
 
-```text
-Built a real-time supply chain analytics platform using Kafka, Docker, Python, SQLite, and Streamlit. Implemented live event streaming, operational analytics, warehouse monitoring, and dashboard visualization for real-time logistics insights.
-```
+## Key Learnings
+
+- Real-time event streaming fundamentals
+- Kafka producer-consumer architecture
+- Docker container orchestration
+- Data pipeline monitoring
+- Building operational analytics dashboards
 
 ---
 
