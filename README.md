@@ -473,16 +473,6 @@ This project demonstrates practical understanding of:
 - Dockerized environments
 - Data engineering workflows
 
----
-
-# Resume Description
-
-```text
-Built a real-time supply chain analytics platform using Kafka, Docker, Python, SQLite, and Streamlit. Implemented live event streaming, operational analytics, warehouse monitoring, and dashboard visualization for real-time logistics insights.
-```
-
----
-
 # Author
 
 Harini M
