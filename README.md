@@ -459,6 +459,8 @@ Container orchestration for scalable deployment.
 
 ![Database Output](screenshots/database-output.png)
 
+All screenshots were generated from live streaming data processed through Kafka consumers and visualized in the Streamlit analytics dashboard.
+
 # Learning Outcomes
 
 This project demonstrates practical understanding of:
