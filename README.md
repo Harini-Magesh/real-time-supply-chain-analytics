@@ -407,6 +407,57 @@ Container orchestration for scalable deployment.
 
 # Screenshots
 
+## Dashboard Overview
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Orders by Warehouse
+
+![Orders by Warehouse](screenshots/ordersbywarehouse.png)
+
+---
+
+## Recent Orders
+
+![Recent Orders](screenshots/Recentorders.png)
+
+---
+
+## Shipment Status Analytics
+
+![Shipment Status](screenshots/shipmentstatus.png)
+
+---
+
+## Top Ordered Products
+
+![Top Products](screenshots/toporders.png)
+
+---
+
+## Kafka Producer Logs
+
+![Producer Logs](screenshots/producer-logs.png)
+
+---
+
+## Kafka Consumer Logs
+
+![Consumer Logs](screenshots/consumer-logs.png)
+
+---
+
+## Docker Containers
+
+![Docker Containers](screenshots/docker-containers.png)
+
+---
+
+## Database Output
+
+![Database Output](screenshots/database-output.png)
 
 # Learning Outcomes
 
