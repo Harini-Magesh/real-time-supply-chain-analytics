@@ -1,10 +1,17 @@
 from kafka import KafkaProducer
 from faker import Faker
+import logging
 import json
 import uuid
 import random
 import time
 from datetime import datetime
+
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+) 
 
 # Kafka Producer
 producer = KafkaProducer(
@@ -41,6 +48,5 @@ while True:
 
     producer.send('orders_topic', value=order)
 
-    print(f'Sent: {order}')
-
+    logging.info(f"Sent order: {order['order_id']}")
     time.sleep(2)

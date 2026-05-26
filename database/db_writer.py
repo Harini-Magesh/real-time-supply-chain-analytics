@@ -1,6 +1,13 @@
 import sqlite3
 from kafka import KafkaConsumer
 import json
+import logging
+
+# Logging setup
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 # SQLite connection
 conn = sqlite3.connect("supply_chain.db")
@@ -30,25 +37,31 @@ consumer = KafkaConsumer(
     value_deserializer=lambda m: json.loads(m.decode('utf-8'))
 )
 
-print("Listening for Kafka events...")
+logging.info("Kafka consumer started")
 
 for message in consumer:
 
-    data = message.value
+    try:
 
-    cursor.execute("""
-    INSERT INTO orders VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        data['order_id'],
-        data['customer_id'],
-        data['warehouse_id'],
-        data['product_id'],
-        data['quantity'],
-        data['price'],
-        data['status'],
-        data['timestamp']
-    ))
+        data = message.value
 
-    conn.commit()
+        cursor.execute("""
+        INSERT INTO orders VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            data['order_id'],
+            data['customer_id'],
+            data['warehouse_id'],
+            data['product_id'],
+            data['quantity'],
+            data['price'],
+            data['status'],
+            data['timestamp']
+        ))
 
-    print("Inserted:", data['order_id'])
+        conn.commit()
+
+        logging.info(f"Inserted order: {data['order_id']}")
+
+    except Exception as e:
+
+        logging.error(f"Pipeline error: {e}")

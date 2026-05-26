@@ -31,7 +31,7 @@ Kafka Topic (orders_topic)
       ↓
 Streaming Consumer
       ↓
- Analytics Database
+SQLite Analytics Database
       ↓
 Streamlit Dashboard
 ```
@@ -43,7 +43,7 @@ Streamlit Dashboard
 ```text
                 ┌─────────────────────┐
                 │ Order Generator     │
-                │ Fake Order Events   │
+                │      Order Events   │
                 └──────────┬──────────┘
                            │
                            ▼
@@ -66,7 +66,7 @@ Streamlit Dashboard
                            │
                            ▼
                 ┌─────────────────────┐
-                │  Database           │
+                │ SQLite Database     │
                 │ Analytics Storage   │
                 └──────────┬──────────┘
                            │
@@ -89,7 +89,7 @@ Streamlit Dashboard
 | Data Processing | Python Consumers |
 | Database | SQLite |
 | Dashboard | Streamlit |
-| Synthetic Data Simulation | Data |
+| Fake Data Generation | Faker |
 | Version Control | Git & GitHub |
 
 ---
@@ -100,7 +100,7 @@ Streamlit Dashboard
 
 - Generates live warehouse order events
 - Streams events continuously into Kafka topics
-- Simulates e-commerce operational traffic
+- Streams operational warehouse traffic
 
 ---
 
@@ -310,6 +310,14 @@ streamlit run dashboards/app.py
 ```
 
 ---
+# Scalability Considerations
+
+- Kafka topics can be partitioned for higher throughput
+- Consumers can scale horizontally for parallel event processing
+- Spark Structured Streaming can replace lightweight consumers for large-scale ETL workloads
+- Cloud object storage such as AWS S3 can support long-term analytics retention
+- Dashboard services can be independently containerized and scaled
+- Streaming pipelines can be extended with monitoring and alerting systems
 
 # Dashboard Features
 
@@ -397,17 +405,9 @@ Container orchestration for scalable deployment.
 
 ---
 
-## Dashboard Preview
+# Screenshots
 
-![Dashboard](screenshots/dashboard.png)
 
-![Orders By Warehouse](screenshots/ordersbywarehouse.png)
-
-![Recent Orders](screenshots/Recentorders.png)
-
-![Shipment Status](screenshots/shipmentstatus.png)
-
-![Top Orders](screenshots/toporders.png)
 # Learning Outcomes
 
 This project demonstrates practical understanding of:
@@ -421,20 +421,12 @@ This project demonstrates practical understanding of:
 - Data engineering workflows
 
 ---
-## Challenges Faced
 
-- Configuring Kafka and Docker networking on Windows
-- Handling PostgreSQL authentication issues
-- Managing real-time streaming consumers
-- Ensuring continuous dashboard updates
+# Resume Description
 
-## Key Learnings
-
-- Real-time event streaming fundamentals
-- Kafka producer-consumer architecture
-- Docker container orchestration
-- Data pipeline monitoring
-- Building operational analytics dashboards
+```text
+Built a real-time supply chain analytics platform using Kafka, Docker, Python, SQLite, and Streamlit. Implemented live event streaming, operational analytics, warehouse monitoring, and dashboard visualization for real-time logistics insights.
+```
 
 ---
 
@@ -442,4 +434,4 @@ This project demonstrates practical understanding of:
 
 Harini M
 
-Data Engineering | Real-Time Analytics | Cloud & Streaming Systems
+Data Engineering | Distributed Streaming Systems | Cloud Analytics
