@@ -477,4 +477,4 @@ This project demonstrates practical understanding of:
 
 Harini M
 
-Data Engineering | Distributed Streaming Systems | Cloud Analytics
+Business Intelligence Engineer | SQL | Power BI | Python | AWS | Analytics
